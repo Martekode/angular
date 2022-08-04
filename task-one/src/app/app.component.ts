@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task-one';
+  langArray = ["PHP","C#","C++","Python", "javascript", "java", "typescript", "Assembly", "native C", "scratch", "kotlin", "Swift"];
 }
