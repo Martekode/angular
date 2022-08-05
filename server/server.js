@@ -22,14 +22,21 @@ let allFriends = [{fName: 'Coach', lName: 'Tim', email: 'tim.broos@becode.org', 
 
 app.get('/', function (request, response) {
     response.send('Hello from server');
+    console.log("started server");
 });
 
 app.post('/', function (request, response) {
     response.status(200).send({"message": "Data received"});
 });
-
-
-app.listen(PORT, function () {});
 app.get('/allFriends', function (request, response) {
     response.send(allFriends);
 })
+app.post('/allFriends', function (request,response) {
+    console.log(request.body);
+    allFriends.push(request.body);
+    response.status(200).send({"message": "Data received"});
+});
+
+
+app.listen(PORT, function () {});
+
