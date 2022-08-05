@@ -21,6 +21,6 @@ export class AppComponent {
     console.log(this.friendModel);
     this.lala = this.friendModel;
     let observable = this.addFriendService.addFriend(this.friendModel);
-    observable.subscribe(data => console.log("it worked"), error => console.error("it didn't work"));
+    observable.subscribe(data => console.log(data), error => console.error(error));
   }
 }
