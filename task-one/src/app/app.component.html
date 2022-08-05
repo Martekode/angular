@@ -7,7 +7,7 @@
   <label for="email">email</label>
   <input [(ngModel)]="friendModel.email" [email]="true" [class.invalid]="email.invalid && email.touched" required #email="ngModel" name="email" type="text">
   <label for="phone-number">phone number</label>
-  <input [(ngModel)]="friendModel.phoneNumber" pattern="[+ 0-9]*" [class.invalid]="phoneNumber.invalid && phoneNumber.touched" required #phoneNumber="ngModel" name="phone-number" type="text">
+  <input [(ngModel)]="friendModel.phoneNumber" pattern="[+0-9]*" [class.invalid]="phoneNumber.invalid && phoneNumber.touched" required #phoneNumber="ngModel" name="phone-number" type="text">
   <label for="fav-lang">favorite language</label>
   <select [(ngModel)]="friendModel.favLang" [class.invalid]="favLang.invalid && favLang.touched" required #favLang="ngModel" name="fav-lang" id="fav-lang">
     <option *ngFor="let lang of langArray"[value]="lang">{{lang}}</option>
