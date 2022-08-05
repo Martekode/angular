@@ -20,6 +20,7 @@ export class AppComponent {
   makeNewFriend(){
     console.log(this.friendModel);
     this.lala = this.friendModel;
-    this.addFriendService.addFriend(this.friendModel);
+    let observable = this.addFriendService.addFriend(this.friendModel);
+    observable.subscribe(data => console.log("it worked"), error => console.error("it didn't work"));
   }
 }
