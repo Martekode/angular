@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Friend } from './friend';
+import { AddFriendService } from './add-friend.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,13 @@ export class AppComponent {
   friendModel = new Friend(null,null, null,null,null);
   neen = "lele";
   lala  : Friend  | null= null;
+
+  constructor(private addFriendService: AddFriendService){
+  }
+
   makeNewFriend(){
     console.log(this.friendModel);
     this.lala = this.friendModel;
+    this.addFriendService.addFriend(this.friendModel);
   }
 }
