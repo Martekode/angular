@@ -14,6 +14,6 @@ export class AddFriendService {
 
   addFriend(friend : Friend){
     console.log("friend added");
-    this.httpclient.post(this._url, friend);
+    return this.httpclient.post(this._url, friend);
   }
 }
