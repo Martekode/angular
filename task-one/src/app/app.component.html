@@ -14,5 +14,5 @@
   </select>
   <button [disabled]="friendForm.form.invalid" id="submit">Submit data!</button>
 </form>
-{{ lala ? lala : neen }}
+{{ lala ? (lala | json) : neen }}
 
