@@ -7,15 +7,13 @@ import { Friend } from './friend';
 })
 export class AddFriendService {
 
-  private _http:HttpClient;
   private _url:string = "http://localhost:6969/";
 
-  constructor(httpclient:HttpClient) {
-    this._http = httpclient;
+  constructor(private httpclient:HttpClient) {
   }
 
   addFriend(friend : Friend){
     console.log("friend added");
-    this._http.post(this._url, friend);
+    this.httpclient.post(this._url, friend);
   }
 }
