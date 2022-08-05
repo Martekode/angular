@@ -30,3 +30,6 @@ app.post('/', function (request, response) {
 
 
 app.listen(PORT, function () {});
+app.get('/allFriends', function (request, response) {
+    response.send(allFriends);
+})
