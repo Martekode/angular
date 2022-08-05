@@ -5,7 +5,7 @@ export class Friend {
     private _phoneNumber:number |null;
     private _favLang:string | null;
 
-    constructor(fname:string | null,lname:string | null,email:string | null ,pnumber:number | null,favlang:string | null){
+    constructor( fname:string | null , lname:string | null , email:string | null , pnumber:number | null , favlang:string | null ){
         this._firstName= fname;
         this._lastName = lname;
         this._email = email;
