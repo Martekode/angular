@@ -14,5 +14,14 @@
   </select>
   <button [disabled]="friendForm.form.invalid" id="submit">Submit data!</button>
 </form>
-{{ lala ? (lala | json) : neen }}
+<div *ngFor="let friend of allFriends">
+  <div>
+    <h1>{{friend._firstName + ' ' + friend._lastName}}</h1>
+    <ul>
+      <li>{{friend._email}}</li>
+      <li>{{friend._phoneNumber}}</li>
+      <li>{{friend._favLang}}</li>
+    </ul>
+  </div>
+</div>
 
